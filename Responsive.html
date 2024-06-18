@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, initail -scale=1.0">
+    </head>
+    <body>
+
+        <h1> The picture element</h1>
+
+        <p> Resize the browser window to load different images</p>
+
+        <picture>
+            <source media="(min-width:750px)" srcset="img_pink_flowers.jpg">
+            <source mediai="(min-width:700px)" srcset="img_white_flower.jpg">
+            <img src="img_orange_flowers.jpg" alt="This is used to describe the element, in this case, flowers" style="width:auto;">
+        </picture>
+
+
+        <h1>The video controls attribute</h1>
+
+        <video width="320" height="240" controls>
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+        <br>
+        <br>
+        
+        <audio controls>
+            <source src="audio1.mp3" type="audio/mp3">
+        </audio>
+
+
+    </body>
+</html>
