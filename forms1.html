@@ -3,7 +3,7 @@
 
 <head>
 
-  <link rel="stylesheet" href="style.css"> \\ This is how I can add Style from a external file, using CSS.
+  <link rel="stylesheet" href="style.css"> 
 
   
 </head>
@@ -44,9 +44,7 @@
           <label>Studying days:</label>
           <br>
           
-          <input type="checkbox" id="Sunday" name="Sunday" Value="1">
-          <label for="Sunday">Sunday</label>
-         
+                 
           <input type="checkbox" id="Monday" name="Monday" Value="2">
           <label for="Monday">Monday</label>
           
@@ -60,11 +58,17 @@
           <label for="Thursday">Thursday</label>
           
           <input type="checkbox" id="Friday" name="Friday" Value="6">
-          <label for="Monday">Monday</label>
+          <label for="friday">Friday</label>
           
+          <div class="first">
           <input type="checkbox" id="Saturday" name="Saturday" Value="7">
           <label for="Saturday">Saturday</label>
+
+          
+            <input type="checkbox" id="Sunday" name="Sunday" Value="1">
+            <label for="Sunday">Sunday</label>
           <br><br>
+        </div>
           
           <label for="email">E-mail</label>
           <input type="email" id="email" name="email">
@@ -74,7 +78,7 @@
           <input type="password" id="password" name="password" minlength="4">
           <br>
           
-          <p> Select your favorite color:</p><br>
+          <p class="second"> select your favorite color:</p><br>
           
           <label for="colors"> Choose your favorite color here:</label>
           <select id="colors" name="colors">
@@ -97,7 +101,7 @@
           <input type="file" id="myfile" name="myfile">
           <br>
           
-          <p>Don't trust the button, it's useless</p>
+          <p id="third">Don't trust the button, it's useless</p>
           <button type="button" onclick="alert('You clicked the button')">Click me</button>
           <br>
           <br>

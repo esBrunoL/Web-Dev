@@ -1,4 +1,51 @@
-body { background-color: powderblue;}
-h2 {color: blue;
+body { background-color: lightgoldenrodyellow;}
+h2 {color: darkblue;
     text-align: center;}
-    
+
+p  {color:rgb(73, 73, 73);
+    font-family: sans-serif;
+    text-align: center;
+    }
+
+a   {color:rgb(73, 73, 73);
+    font-family: sans-serif;
+    text-align: center
+    }
+
+.list  { background-color: aquamarine;
+        border-style:none none none solid ;
+        color: darkslategray;
+        text-align: center;
+        list-style-type: none;
+     }
+
+
+input[type=checkbox]{
+    accent-color: red;
+}
+
+input[type=radio]{
+    accent-color: green;
+}
+
+.first  {
+    color: red;
+    border: 2px dotted orangered
+}
+
+.second {
+    color: black;
+    border: dotted rebeccapurple ;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: inherit;
+}
+
+#third{
+    color:blueviolet;
+}
+
+button:hover{
+    background-color: blue;
+    color: blanchedalmond;
+}
