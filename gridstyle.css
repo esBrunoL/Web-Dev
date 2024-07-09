@@ -19,6 +19,7 @@
 .S5 {
     grid-area: footer;
     text-align: right;
+    color: black;
 }
 
 .grid-container {
@@ -27,8 +28,11 @@
         'header header header  header'
         'menu main main right'
         'menu  footer footer  right';
-    background-color: rgba(44, 70, 163, 0.467);
+    background-image: linear-gradient(rgba(44, 70, 163, 0.467), darkblue);
     padding: 10px;
+    color: blanchedalmond;
+    border: 0px;
+
 }
 
 button:hover {
@@ -44,6 +48,12 @@ a:visited {
     color: lightslategray;
 }
 
+h1,
+h2,
+h3 {
+    text-shadow: 2px 2px 5px;
+}
+
 p {
     color: blanchedalmond;
     padding: 10px;
@@ -56,14 +66,23 @@ p:hover {
     padding: 10px;
 }
 
-.notice {
+.noticeR {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgb(102, 245, 121);
+    background-image: radial-gradient(green 50%, rgba(44, 70, 163, 1));
     width: 300px;
-    border: 5px solid rgb(0, 44, 0);
-    padding: 10px;
-    margin: 10px;
-    color: rgb(0, 44, 0);
+    height: auto;
+    border: 2px solid rgba(44, 70, 163, 0.467);
+    padding: 5px;
+}
+
+.noticeL {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(green 50%, rgba(44, 70, 163, 1));
+    height: auto;
+    border: 2px solid rgba(44, 70, 163, 0.467);
+    padding: 5px;
 }
