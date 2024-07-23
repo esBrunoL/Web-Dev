@@ -5,11 +5,15 @@
 
 .S2 {
     grid-area: menu;
+    background-color: black;
+    padding-top: 1vw;
+    padding-left: 1vw;
 }
 
 .S3 {
     grid-area: main;
     text-align: center;
+    padding: auto;
 }
 
 .S4 {
@@ -18,17 +22,19 @@
 
 .S5 {
     grid-area: footer;
-    text-align: right;
+    text-align: center ;
     color: black;
 }
 
+
 .grid-container {
+
     display: grid;
     grid-template-areas:
-        'header header header  header'
+        'header header header header'
         'menu main main right'
-        'menu  footer footer  right';
-    background-image: linear-gradient(rgba(44, 70, 163, 0.467), darkblue);
+        'footer  footer footer footer';
+    background-image: linear-gradient(rgba(44, 70, 163, 0.467), rgb(0, 0, 0));
     padding: 10px;
     color: blanchedalmond;
     border: 0px;
@@ -40,29 +46,32 @@ button:hover {
     color: blanchedalmond;
 }
 
-a:link {
-    color: blue
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-a:visited {
+ a:visited {
     color: lightslategray;
+    text-decoration: wavy;
 }
 
-h1,
+/* This part of the code is to keep my header size fixed and determined by the screen size, or viewport*/
+h1 {
+    font-size: 4vw;
+    text-shadow: 1px 1px 5px;
+}
+
+/* This part of the code is to keep my header size fixed and determined by the screen size, or viewport*/
 h2,
 h3 {
-    text-shadow: 2px 2px 5px;
+    font-size: 2vw;
+    text-shadow: 1px 1px 5px;
 }
 
 p {
+    font-size: 1vw;
     color: blanchedalmond;
-    padding: 10px;
-}
-
-p:hover {
-    background-color: rgb(0, 44, 0);
-    color: white;
-    font-style: bold;
     padding: 10px;
 }
 
@@ -70,19 +79,25 @@ p:hover {
     position: fixed;
     top: 0;
     right: 0;
-    background-image: radial-gradient(green 50%, rgba(44, 70, 163, 1));
-    width: 300px;
+    background-color: darkgreen;
     height: auto;
-    border: 2px solid rgba(44, 70, 163, 0.467);
-    padding: 5px;
+    border: 0.5vw solid rgba(0, 0, 0, 1);
+    font-size: 1vw;
+    text-align: center;
 }
 
 .noticeL {
     position: fixed;
-    top: 0;
+    top: 10vw;
     left: 0;
-    background-image: radial-gradient(green 50%, rgba(44, 70, 163, 1));
+    background-color: rgb(0, 255, 0);
     height: auto;
-    border: 2px solid rgba(44, 70, 163, 0.467);
+    border: 4px solid rgba(0, 0, 0, 1);
     padding: 5px;
+
+
+    p {
+        color: black;
+    }
+
 }
