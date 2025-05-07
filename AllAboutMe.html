@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Bruno Lobo
+    </title>
+    <link rel="icon" href="Logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="aboutstyle.css">
+</head>
+
+<body>
+    
+
+    <div class="H1">
+        <button type="button" class="M1">The original webpage</button>
+        <button type="button" class="M2">Calculate my age</button>
+        <a href="https://wa.me/16478811148"><button type="button" class="M3">Contact me</button></a>
+    </div>
+
+    <div class="L1">
+        <p>Here I keep some of my personal information, <br>You can also contact me if you want, just click on the
+            button and you will be redirected straight to my WhatsApp</p>
+    </div>
+    <div class="T1">
+        <h1>
+            Welcome to my All About Me website!!
+        </h1>
+
+
+        <p>I had my DNA tested, it was a long time ago, for a science project.<br>
+            My family comes mostly from Europe and Africa.<br>
+            For the Europian part, I got 42% of my genes comming from Iberic region, which makes sense, because Brazil
+            was a portuguese colony<br>
+            And my African part comes from the Ocidental Africa, from places that now are known as Congo, Angola and so
+            on.</p>
+
+        <ul>
+            <h3>Here are some of my hobbies:</h3>
+            <li>
+                <h3>Hikking</h3>
+            </li>
+            <p>I love Hikking and discovering new places, enjoying the nature and if it ends with a camp fire, that is
+                perfect!</p>
+            <li>
+                <h3>Swiming</h3>
+            </li>
+            <p>I am a former swiming athlete, so it always brings me good memories.</p>
+            <li>
+                <h3>Listenig to Music</h3>
+            </li>
+            <p>This is probably the hobbie that I do the most, if I can do something while listening to some music, then
+                I will!</p>
+        </ul>
+    </div>
+
+    <div class="T1">
+
+    </div>
+
+    <input type="date" id="date">
+<button id="calc">Calculate</button>
+<div id="Age"></div>
+<script>
+    
+document.getElementById("calc").addEventListener("click",function(){
+  
+  var myDate = new Date(document.getElementById("date").value),
+    milli = myDate.getTime(),
+    newDate = new Date(),
+    newMilli = newDate.getTime();
+  
+  document.getElementById("Age").innerHTML = Math.floor((newMilli - milli) / 1000 / 60 / 60 / 24 / 30 / 12); 
+});
+   
+</script>
+
+
+
+
+</body>
+
+<body>
+
+
+</html>

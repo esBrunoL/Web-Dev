@@ -7,17 +7,8 @@
 
 <body>
     <h1>Age Calculator</h1>
-    <form name="Age">
-        <label for="Day">Day</label>
-        <input type="value" id="Day">
-
-        <label for="Month">Month</label>
-        <input type="value" id="Month">
-
-        <label for="Year">Year</label>
-        <input type="value" id="Year">
-
-
+    <input type="date" id="bd">
+    
         <button onclick="calculate()">Calculate</button>
         <p id="Day"></p><p id="Month"></p><p id="Year"></p>
 
@@ -27,23 +18,22 @@
 
 
             function calculate() {
-                 var BD =document.getElementById("Day").value;
-                 var BM = document.getElementById("Month").value;
-                 var BY = document.getElementById("Year").value;
-
-                 alert(`your entered ${BY} as your birthyear`);
+                 var BD =document.getElementById("bd").value;
+                 
+                 alert(`your entered ${BD} as your Birthday`);
                 var Today = new Date();
                 var y = Today.getFullYear;
-                let Age = y - BY;
+                let Age = y - BD.getFullYear;
+                <div id="Age"></div>
 
-               // if (BD[1] > Today.getMonth) {
-               //     Age--
-                //}
-                //if (BD[1] == Today.getMonth, BD > Today.getDay) {
-                //    Age--
-                //}
+               if (BD > Today.getMonth) {
+                   Age--
+               }
+               if (BD == Today.getMonth && BD > Today.getDay) {
+                   Age--
+                }
                 document.getElementById("age").innerHTML ="Your age is " + Age;
-
+alert(`Your age is ${Age}`);
             }
             
         </script>

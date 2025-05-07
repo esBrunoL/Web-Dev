@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title>My home page</title>
+    </head>
+    
+    <body>
+        <h1 id="Header">My home page</h1>
+        <p id="ABC">Hello I am Marijin and this is my home page</p>
+        <p>
+                I also wrote a book! Read it
+            <a id="link" href="http://www.google.com">here</a>
+                .
+         </p>
+        <button onclick="function1()">complete</button>
+        <button onclick="function2()">new</button>  
+    <script>
+        h = document.getElementById("Header");
+        p = document.getElementById("ABC");
+        a = document.getElementById("link");
+        
+
+        function function1() {
+            pNew = document.createElement("p");
+            pNewText = document.createTextNode("This is a new text");
+            pNew.appendChild(pNewText);
+        }
+        function function2() {
+            
+
+        }
+    </script>
+    </body> 
+</html>
