@@ -3,31 +3,68 @@
         <title>My home page</title>
     </head>
     
-    <body>
-        <h1 id="Header">My home page</h1>
-        <p id="ABC">Hello I am Marijin and this is my home page</p>
-        <p>
-                I also wrote a book! Read it
-            <a id="link" href="http://www.google.com">here</a>
-                .
-         </p>
-        <button onclick="function1()">complete</button>
-        <button onclick="function2()">new</button>  
+    <body id="Body">
+        <form>
+            <input type="text" id="newItem"><br>
+        </form>
+
+        <button onclick="removeFirst()">Remove First</button>
+        <button onclick="add()">Add New item</button>  
+        <button onclick="removeLast()">Remove Last</button>  
+        <ul id="list">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
     <script>
-        h = document.getElementById("Header");
-        p = document.getElementById("ABC");
-        a = document.getElementById("link");
+
+        list = document.getElementById("list")
+        listItens = list.getElementsByTagName("li");
         
+        alertMessage = document.createTextNode("This is the last Item of the list!!");
+        itemAlert = document.createElement("li");
+        itemAlert.appendChild(alertMessage);
 
-        function function1() {
-            pNew = document.createElement("p");
-            pNewText = document.createTextNode("This is a new text");
-            pNew.appendChild(pNewText);
+        counter = listItens.length
+
+        function removeFirst() { 
+            if (counter > 1)
+            {
+                listItens[0].remove();
+                counter --;
+            }
+            else {
+                list.appendChild(itemAlert);
+            }
+
+
         }
-        function function2() {
+
+        function add() {
+            inputItem = document.getElementById("newItem").value;
+            newItem = document.createTextNode(inputItem);
+            newListItem = document.createElement("li");
+            newListItem.appendChild(newItem);
+            list.appendChild(newListItem);            
+            counter++;
             
-
+            // Find a way to clear the input field, it shall save user's time
+            inputItem = " ";
+            
         }
+
+        function removeLast() {
+            if (counter > 1) 
+            {
+                listItens[listItens.length-1].remove();
+                counter --;
+            }
+            else {
+                list.appendChild(itemAlert);
+            }
+        }
+
     </script>
     </body> 
 </html>
