@@ -6,7 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Select a hour</h2>
+
+    <label for="name"> Name :</label>
+    <input type="text" id="name"style="background: rgb(221, 249, 221);" autofocus
+    onfocusout="focusOut()" placeholder="Name" >
+    <label for="studentId">Student ID</label>
+    <input type="number" name="studentId" id="studentId" placeholder="1234567">
+    <p>Select a hour</p>
     <input type="radio" name="box1" value="05:00" id="five" checked> 
     <label for="five">05:00</label>  <br>
     <input type="radio" name="box1" value="06:00" id="six">
@@ -16,23 +22,98 @@
     <input type="radio" name="box1" value="08:00" id="eight">
     <label for="eight">08:00</label>  <br>
 
-    <h2>Select an Item</h2>
-    <input type="radio" name="box2"  id="item1" checked> 
+    <p>Select an Item</p>
+    <input type="radio" name="box2" value="Item 1" id="item1" checked> 
     <label for="item1">Item 1</label>  <br>
-    <input type="radio" name="box2"  id="item2">
+    <input type="radio" name="box2" value="Item 2" id="item2">
     <label for="item2">Item 2</label>  <br>
-    <input type="radio" name="box2"  id="item3">
+    <input type="radio" name="box2" value="Item 3" id="item3">
     <label for="item3">Item 3</label>  <br>
-    <input type="radio" name="box2"  id="item4">
+    <input type="radio" name="box2" value="Item 4" id="item4">
     <label for="item4">Item 4</label>  <br> <br>
+    <label id="message"> Message : </label> <br>
+    <button onclick="submit()" id="submit" disabled>Submit</button>
 
-    <button onclick="submit()">Submit</button>
+    <br><br><br>
+    <h2>Chuck Noris Jokes:</h2>
+    <p id="jokeHolder"> Joke :</p>
+    <p id="joke">. . .</p>
+    <button onclick="displayJoke()">Get a new joke</button>
+    <input type="text" id="cat" size="10">
+
     
 </body>
 
 <script>
+    messageBox = document.getElementById("message");
+    message = document.createTextNode(" ");
+    messageBox.appendChild(message);
+    nameBox = document.getElementById("name");
+    studentId = document.getElementById("studentId").value;
+    
+    
+
+    radioHour = document.getElementsByName("box1");
+    radioItem = document.getElementsByName("box2");
+
+    joke = document.getElementById("joke");
+
+    
     function submit() {
-        
+        //console.log("Entrou na função")
+        if(!(studentId.length == 8)){
+            message.textContent = "Your student Id is not valid"
+            nameBox.style.visibility = "visible";
+            document.getElementById("submit").disabled = true;
+            nameBox.value = "";
+            return;
+        }
+
+        for( i in radioHour ){
+            if( radioHour[i].checked){
+                message.textContent +="You choose : "+ radioHour[i].value;
+            }
+        }
+        for( i in radioItem ){
+            if( radioItem[i].checked){
+                message.textContent +=" "+ radioItem[i].value;
+            }
+        }
+
+        nameBox.style.visibility = "visible";
+        document.getElementById("submit").disabled = true;
+        nameBox.value = "";
     }
+    function focusOut() {
+        if( nameBox.value == ""){
+            message.textContent = "Please enter your name before choosing the options!"
+            return;
+        }   
+        else{
+            nameBox.style.visibility ="hidden";
+            message.textContent = "Your name is "+ nameBox.value + ". ";
+            document.getElementById("submit").disabled = false;
+        }
+    }
+    function  displayJoke() {
+        if ( document.getElementById("cat").value != ""){
+            category = "?category="+document.getElementById("cat").value;
+        }
+        else{category = "";}
+        //Tried adding the url on fetch, but it did not worked, so I a variable to get the  url flexible.
+        url = "https://api.chucknorris.io/jokes/random"+ category
+        fetch(url)
+        .then(a => {
+            return a.json()
+        }
+        )
+        .then(d => {
+            joke.innerHTML = d.value
+        }
+        )
+        
+
+    }
+
 </script>
 </html>
