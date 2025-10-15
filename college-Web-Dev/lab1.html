@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <head>
+        <title>My home page</title>
+    </head>
+    
+    <body id="Body">
+        
+        <button onclick="insertRow()">Inser Row</button>
+        <button onclick="deleteRow()">Delete Row</button>
+
+        <table id="sampleTB" border="1">
+            <tr>
+                <td>Row 1, Col 1</td>
+                <td>Row 1, Col 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, col 1</td>
+                <td>Row 2, col 2</td>                
+            </tr>
+        </table> <br>
+        <p id="message">Message : </p>
+
+
+
+        <script>         
+            // Variable used for the table
+            table = document.getElementById("sampleTB");
+            existingRow = table.getElementsByTagName("tr");
+            existingCell = existingRow[0].getElementsByTagName("td");
+            rowCounter = existingRow.length;
+            
+            // The following lines are for the message, it will always exist, but will be hidden
+            message = document.getElementById("message");
+            noMoreRowM = document.createTextNode("No more rows to be delete!")
+            
+            
+            function insertRow() {
+                newRow = document.createElement("tr");
+                
+                //console.log(rowCounter);
+                rowCounter ++;
+
+                for (i = 0; i < existingCell.length; i++) {
+                    cellCounter = i + 1;
+                    cellText = document.createTextNode("Row "+rowCounter+", Cell "+cellCounter);
+                    newCell = document.createElement("td");
+                    newCell.appendChild(cellText);
+                    newRow.appendChild(newCell);
+                }
+                table.appendChild(newRow);
+                if (message.hasChildNodes()){
+                    message.removeChild(noMoreRowM);
+                }
+            }
+            
+            function deleteRow() {
+                if(existingRow.length >= 1) {
+                    table.deleteRow(0);
+                    //The following line of code is to get the index of rows updating, once it was requested to ignore that, and keep following the number of rows, I just keep as a comment.
+                    //rowCounter --;
+                }
+                if(existingRow.length < 1) {
+                    message.appendChild(noMoreRowM);
+                }
+            }            
+        </script>
+    </body> 
+    </html>

@@ -1,0 +1,63 @@
+.T1{
+    grid-area: main;
+    text-align: center;
+    padding: auto;
+
+}
+
+
+.M1{
+  grid-area: menul;
+  background-color: #444;
+  color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: auto;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 3vw;
+}
+.M2{
+  grid-area: menu;
+  background-color: #444;
+  color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: auto;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 3vw;
+}
+.M3{
+  grid-area: menur;
+ background-color: #444;
+  color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: auto;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 3vw;
+}
+
+.L1{
+  grid-area: left;
+  text-align: center;
+}
+
+.grid-container {
+
+    display: grid;
+    grid-template-areas:
+        'menul menu menur'
+        'left main .'
+        'left main .'
+        'footer footer footer';
+    padding: 1vw;
+    border: 5vw;
+
+}
+

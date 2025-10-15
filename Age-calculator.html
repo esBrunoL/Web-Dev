@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style></style>
+</head>
+
+<body>
+    <h1>Age Calculator</h1>
+    <input type="date" id="bd">
+    
+        <button onclick="calculate()">Calculate</button>
+        <p id="Day"></p><p id="Month"></p><p id="Year"></p>
+
+        <p id="age"></p>
+
+        <script>
+
+
+            function calculate() {
+                 var BD =document.getElementById("bd").value;
+                 
+                 alert(`your entered ${BD} as your Birthday`);
+                var Today = new Date();
+                var y = Today.getFullYear;
+                let Age = y - BD.getFullYear;
+                <div id="Age"></div>
+
+               if (BD > Today.getMonth) {
+                   Age--
+               }
+               if (BD == Today.getMonth && BD > Today.getDay) {
+                   Age--
+                }
+                document.getElementById("age").innerHTML ="Your age is " + Age;
+alert(`Your age is ${Age}`);
+            }
+            
+        </script>
+        
+
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+head {
+    text-align: center;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+h2 {
+    color: darkblue;
+    text-align: center;
+}
+
+p {
+    color: rgb(73, 73, 73);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+a {
+    color: rgb(73, 73, 73);
+    font-family: sans-serif;
+    text-align: center
+}
+
+.list {
+    background-color: aquamarine;
+    border-left-style: solid;
+    border-width: 5px;
+    border-color: darkblue;
+    color: rgb(79, 47, 47);
+    text-align: center;
+    list-style-type: none;
+}
+
+
+input[type=checkbox] {
+    accent-color: red;
+}
+
+input[type=radio] {
+    accent-color: green;
+}
+
+.first {
+    color: red;
+    border: 2px dotted orangered
+}
+
+.second {
+    color: black;
+    border: dotted rebeccapurple;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: inherit;
+}
+/*Creating Id customizations*/
+#third {
+    color: hotpink;
+}
+/*To link the id customization use id="id.Name" on the html file*/
+
+
+button:hover {
+    background-color: blue;
+    color: blanchedalmond;
+}
+
+iframe {
+    align-items: center;
+}
+
+
+/* Use for comentaries about the code.*/
+a:link {
+    color: blue
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: greenyellow
+}
+
+
+div p {
+    background-color: blue;
+}
+
+/* Look for modificators: general sibilins{div ~ p }, adjacent sibilins{div + p } */
+

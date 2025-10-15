@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="selector" id="all" checked>
+    <label for="all">Display all countries</label> <br>
+    <input type="radio" name="selector" id="country">
+    <label for="country">Display country No</label>
+    <input type="number" min="1" max="250" id="number"> <br>
+    <input type="radio" name="selector" id="border">
+    <label for="border">Display borders for :</label>
+    <input type="text" name="" id="main"> <br>
+    <button onclick="button1()">Display Countries</button>
+    
+    <p id="answer"></p>
+</body>
+<script>
+    answer = document.getElementById("answer");
+    selection = document.getElementsByName("selector");
+    
+    let obj = null;
+    
+    fetch('https://restcountries.com/v2/all')
+    .then(a => {
+        return a.json()
+    })
+    .then(data => {
+        obj = data
+        //console.log(obj)
+    })
+    
+    function button1(){
+        // console.log(number)
+        number = document.getElementById("number").value;
+        main = document.getElementById("main").value        
+        if(selection[0].checked){
+            for (i = 0; i< obj.length; i++){
+                answer.innerHTML += obj[i].name + "<br>";
+            }
+        }
+        else if(selection[1].checked){
+            
+            answer.innerHTML = obj[number - 1].name;
+        }
+        else {
+
+            for ( i = 0; i < obj.length; i++){
+                if (obj[i].name == main){
+                    answer.innerHTML = obj[i].borders.length
+                    neibours = obj[i].borders;
+                    //answer.innerHTML = neibours
+                    for(n = 0; n < neibours; n++){
+                        answer.innerHTML += neibours[n] + "<br>"
+                        break
+                    }                   
+                }
+                
+            }
+
+        }
+    }
+
+
+</script>
+</html>

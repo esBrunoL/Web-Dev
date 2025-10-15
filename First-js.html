@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScrip Variables Example 1</h1>
+    <p>In this example, x, y and z are variables.</p>
+    <p id="demo1"></p>
+
+    <script>
+
+        var N1 = prompt("Try a value for X:");
+        var x = parseInt(N1);
+        var N2 = prompt("Try a value for Y:");
+        let y = parseInt(N2);
+        let z = x + y;
+        document.getElementById("demo1").innerHTML = "the value for z is: " + z;
+    </script>
+
+    <h1>JavaScrip Variables Examples 2</h1>
+    <p>In this example, price1, price2 and total are variables.</p>
+
+    <p id="demo2"></p>
+
+    <script> // You can use const if the variable value is constant
+        const price1 = 5;
+        const price2 = 6;
+        let total = price1 + price2;
+        document.getElementById("demo2").innerHTML = "the total is : " + total;
+    </script>
+
+    <h1>Statements Direct Action example</h1>
+
+    <button onclick="MyFunction()"> try me</button>
+
+    <script>
+        function MyFunction() {
+            alert("Hello! I am an alert box!");
+            let x = x + 1;
+            document.getElementById("X value is : " + x);
+
+        }
+
+    </script>
+
+    <h1>JavaScript for Loop Example</h1>
+    <p id="demo3"></p>
+
+    <script>
+        let text = " ";
+
+        for (let i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text;
+    </script>
+
+    <h2>JavaScript: While loop</h2>
+
+    <p id="demo4"></p>
+
+    <script>
+        let text1 = " ";
+        let i = 0;
+        while (i <= 10) {
+            text1 += "<br> The number is " + i;
+            i++
+        }
+        document.getElementById("demo4").innerHTML = text1;
+    </script>
+
+    <h2>JavaScrip Const Array Example</h2>
+    <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+    <p id="demo5"></p>
+
+    <script>
+        //create an Array:
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        //Change:
+        cars[0] = "Toyota";
+
+        //Add Element:
+        cars.push("Audi");
+
+        //Display the Array:
+        document.getElementById("demo5").innerHTML = cars;
+
+    </script>
+
+    <h1>JavaScrip uses names to access object propreties.</h1>
+
+    <p id="demo6"></p>
+
+    <script>
+        const person = { Fname: "Jonh", Lname: "Doe", age: 46 };
+        document.getElementById("demo6").innerHTML = person.age;
+    </script>
+
+
+    <h1>JavaScrip functions:</h1>
+    <p>Invoke (call) a function that converts from </p>
+    <p id="demo7"></p>
+
+    <script>
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+        let value = toCelsius(prompt("What is the temperature in Farenheits?"));
+
+        document.getElementById("demo7").innerHTML = value;
+    </script>
+
+    <script>
+        function toKg(lb){
+
+        }
+    </script>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: brown; width: 20px; padding: 40px;">
+        Mouse over me
+    </div>
+    <script>
+        function mOver(obj){
+            obj.innerHTML = "Mouse over me"
+        }
+    </script>
+    <br><br>
+    
+
+
+</body>
+
+</html>
+</doctype>

@@ -1,0 +1,105 @@
+<DOCTYPE! html>
+  <html>
+    <body>
+      <h2> Forms for Pratice </h2>
+      
+      <form name="myform" action="done.html">
+        <fieldset>
+          <legend>Student Details</legend>
+          
+          <label for="fname" >First Name</label>
+          <input type = "text" id="fname" required>
+          
+          <label for="lname" >Last Name</label>
+          <input type = "text" id="lname" required>
+          <br>
+          <br>     
+          
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email">
+          <br><br>
+          
+          <label for="bdaymonth"> Select Bithday(month and year)</label>
+          <input type="month" id="bdaymonth" required>
+          <br>
+          <br>
+          
+          <input type="radio" id="gender" name="gender" value="Male">
+          <label for="gender"> Male</label>
+          <br>
+          
+          <input type="radio" id="gender" name="gender" value="Female">
+          <label for="gender"> Female</label>
+          <br>
+          
+          <input type="radio" id="gender" name="gender" value="Non Binary" required>
+          <label for="gender"> Non Binary</label>
+          <br>
+          <br>
+          
+          <label>Studying days:</label>
+          <br>
+          
+          <input type="checkbox" id="Sunday" name="Sunday" Value="1">
+          <label for="Sunday">Sunday</label>
+         
+          <input type="checkbox" id="Monday" name="Monday" Value="2">
+          <label for="Monday">Monday</label>
+          
+          <input type="checkbox" id="tuesday" name="tuesday" Value="3">
+          <label for="tuesday">Tuesday</label>
+          
+          <input type="checkbox" id="Wednesday" name="Wednesday" Value="4">
+          <label for="Wednesday">Wednesday</label>
+          
+          <input type="checkbox" id="Thursday" name="Thursday" Value="5">
+          <label for="Thursday">Thursday</label>
+          
+          <input type="checkbox" id="Friday" name="Friday" Value="6">
+          <label for="Monday">Monday</label>
+          
+          <input type="checkbox" id="Saturday" name="Saturday" Value="7">
+          <label for="Saturday">Saturday</label>
+          <br><br>
+               
+          
+          <p>This is a dropdownlist, it is for the user to pick one of the options.</p>
+          
+          <label for="Language"> Pick the Language you practiced:</label>
+
+          <select id="Language" name="Language">
+            <option value="none">None</option>
+            <option value="html">html</option>
+            <option value="java">Java</option>
+            <option value="css">Css</option>
+            <option value="C">C or C#</option>
+            <option value="python">Python</option>
+          </select>
+           <br>
+           <br>
+           
+            <p> This is text area which can take multiple lines</p>
+                 <textarea name="message" rows="10" cols="30">What did you studied today? </textarea>
+           <br>
+           <br>
+          
+          <label for="myfile"> Upload the sumarization of the topic or the code:</label>
+          <input type="file" id="myfile" name="myfile">
+          <br>
+          
+          <p>Don't trust the button, it's useless</p>
+          <button type="button" onclick="alert('You clicked the button')">Click me</button>
+          <br>
+          <br>
+          
+          <input type="submit" value="submit"> 
+            
+          
+          
+        </fieldset>
+        
+      </form>
+      
+    </body>
+  </html>
+  

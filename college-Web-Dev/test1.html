@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grade Calculator</h1>
+
+    <button onclick="addActivity()">Add activity</button>
+    <label >Activity name</label>
+    <input type="text" id="activityName" >
+    <label>Weight</label>
+    <input type="number" id="weight" > <br>
+    <button onclick="addGrade()">Add grade</button>
+    <label >Grade</label>
+    <input type="number" id="grade">
+    <label>Activity No</label>
+    <input type="number" id="activityNumber" >
+    <br>
+
+    <button onclick="deleteActivity()">Delete Activity</button>
+    <table id="table" border="1">
+        <tr>
+            <th>No</th>
+            <th>Activity</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Lab 1</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Lab 2</td>
+            <td>20</td>
+            <td>40</td>
+        </tr>
+    </table>
+    <p style="color: red;" id="message" > Message: </p>
+    <script>
+        errorMessage = document.createTextNode("");
+        messageBox = document.getElementById("message");
+        messageBox.appendChild(errorMessage);
+        table = document.getElementById("table");
+        rows = table.getElementsByTagName("tr");
+        rowCounter = rows.length;
+        
+        
+        function addActivity() {   
+            errorMessage.textContent = " ";       
+            name = document.getElementById("activityName").value;
+            weight = document.getElementById("weight").value;
+            if(name == "") {
+                errorMessage.textContent = "Activity name is rejected";
+                return;
+            }
+            if( weight < 1 || weight > 100) {
+                errorMessage.textContent = "Weight is rejected";
+                return;
+            }
+            newActivity = [rowCounter,name,weight, " "];
+            //console.log(newActivity);
+
+
+            newRow = document.createElement("tr");
+            for( i = 0; i < newActivity.length ; i++) {
+                data = document.createTextNode(newActivity[i])
+                newData = document.createElement("td");
+                newData.appendChild(data);
+                newRow.appendChild(newData);                
+            }
+            table.appendChild(newRow);
+            rowCounter ++;
+        }
+
+        function addGrade() {
+            grade = document.getElementById("grade").value;
+            activityNumber = document.getElementById("activityNumber").value;
+            errorMessage.textContent = " ";
+            
+            if(grade == ' ' ||  grade > 100 || grade < 1){
+                errorMessage.textContent = "Grade is rejected."
+                return;
+            }
+            if( (activityNumber < 1) || activityNumber > rowCounter - 1 || activityNumber == ''){
+                errorMessage.textContent = "Activity No is rejected."
+                return;
+            }
+
+            console.log(table.rows[activityNumber].cells[3]);
+            table.rows[activityNumber].cells[3].textContent = grade;   
+        }
+        
+        function deleteActivity() {
+            errorMessage.textContent = " ";
+            if( rowCounter == 1){
+                errorMessage.textContent = "No more activities to remove."
+            return; 
+            }
+
+            table.deleteRow(-1);
+            rowCounter --;
+        }
+
+    </script>
+</body>
+</html>
