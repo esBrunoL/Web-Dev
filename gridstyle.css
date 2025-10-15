@@ -793,6 +793,104 @@ legend {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Responsive Radio Button and Checkbox Styles */
+.section-label {
+    display: block;
+    color: #87ceeb;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.radio-option, .checkbox-option {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 2px solid rgba(135, 206, 235, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: fit-content;
+    flex: 1;
+    min-width: 120px;
+}
+
+.radio-option:hover, .checkbox-option:hover {
+    background: rgba(135, 206, 235, 0.1);
+    border-color: rgba(135, 206, 235, 0.4);
+    transform: translateY(-1px);
+}
+
+.radio-option input[type="radio"], 
+.checkbox-option input[type="checkbox"] {
+    margin-right: 0.8rem;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.radio-option label, .checkbox-option label {
+    color: #f5f5dc;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0;
+}
+
+.radio-option input[type="radio"]:checked + label,
+.checkbox-option input[type="checkbox"]:checked + label {
+    color: #87ceeb;
+    font-weight: 600;
+}
+
+.radio-option:has(input:checked), 
+.checkbox-option:has(input:checked) {
+    background: rgba(135, 206, 235, 0.2);
+    border-color: #87ceeb;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.3);
+}
+
+/* Responsive breakpoints for form controls */
+@media (max-width: 768px) {
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+    }
+    
+    .radio-option, .checkbox-option {
+        min-width: 100%;
+        flex: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .radio-option {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+    
+    .checkbox-option {
+        flex: 1 1 calc(33.333% - 0.67rem);
+    }
+}
+
+@media (min-width: 1025px) {
+    .radio-option {
+        flex: 1 1 auto;
+        max-width: 200px;
+    }
+    
+    .checkbox-option {
+        flex: 1 1 calc(25% - 0.75rem);
+        max-width: 160px;
+    }
+}
+
 .study-benefits {
     background: rgba(0,0,0,0.1);
     padding: 2rem;

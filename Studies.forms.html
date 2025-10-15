@@ -104,45 +104,55 @@
                     <input type="month" id="bdaymonth" name="bdaymonth" required>
                     <br><br>
           
-          <lable for="gender">Select your gender:</label> 
-          <br>
-          <input type="radio" id="gender" name="gender" value="Male">
-          <label for="gender"> Male</label>
-          <br>
+                    <!-- GENDER SELECTION - Responsive Radio Buttons -->
+                    <label class="section-label">Select your gender:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="male" name="gender" value="Male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="nonbinary" name="gender" value="Non Binary">
+                            <label for="nonbinary">Non Binary</label>
+                        </div>
+                    </div>
           
-          <input type="radio" id="gender" name="gender" value="Female">
-          <label for="gender"> Female</label>
-          <br>
-          
-          <input type="radio" id="gender" name="gender" value="Non Binary">
-          <label for="gender"> Non Binary</label>
-          <br>
-          <br>
-          
-          <label>Studying days:</label>
-          <br>
-          
-          <input type="checkbox" id="Sunday" name="Sunday" Value="1">
-          <label for="Sunday">Sunday</label>
-         
-          <input type="checkbox" id="Monday" name="Monday" Value="2">
-          <label for="Monday">Monday</label>
-          
-          <input type="checkbox" id="tuesday" name="tuesday" Value="3">
-          <label for="tuesday">Tuesday</label>
-          
-          <input type="checkbox" id="Wednesday" name="Wednesday" Value="4">
-          <label for="Wednesday">Wednesday</label>
-          
-          <input type="checkbox" id="Thursday" name="Thursday" Value="5">
-          <label for="Thursday">Thursday</label>
-          
-          <input type="checkbox" id="Friday" name="Friday" Value="6">
-          <label for="Monday">Monday</label>
-          
-          <input type="checkbox" id="Saturday" name="Saturday" Value="7">
-          <label for="Saturday">Saturday</label>
-          <br><br>
+                    <!-- STUDY DAYS SELECTION - Responsive Checkbox Grid -->
+                    <label class="section-label">Studying days:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="sunday" name="Sunday" value="1">
+                            <label for="sunday">Sunday</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="monday" name="Monday" value="2">
+                            <label for="monday">Monday</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="tuesday" name="Tuesday" value="3">
+                            <label for="tuesday">Tuesday</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="wednesday" name="Wednesday" value="4">
+                            <label for="wednesday">Wednesday</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="thursday" name="Thursday" value="5">
+                            <label for="thursday">Thursday</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="friday" name="Friday" value="6">
+                            <label for="friday">Friday</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="saturday" name="Saturday" value="7">
+                            <label for="saturday">Saturday</label>
+                        </div>
+                    </div>
           
           <label for="avb"> Choose an available time:</label>
           <select id="avb" name="avb">
