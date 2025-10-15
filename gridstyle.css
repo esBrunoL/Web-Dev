@@ -1118,3 +1118,193 @@ textarea {
         text-align: center;
     }
 }
+
+/* ============================================================================
+   ACCESSIBILITY MODE STYLES
+   High contrast mode optimized for color blind users and visual impairments
+   ============================================================================ */
+
+.accessibility-mode {
+    /* Main background - Pure black for maximum contrast */
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+.accessibility-mode,
+.accessibility-mode * {
+    /* All text - Pure white for maximum readability */
+    color: #FFFFFF !important;
+}
+
+/* Navigation and Interactive Elements */
+.accessibility-mode .navbar {
+    background-color: #000000 !important;
+    border-bottom: 3px solid #FFFFFF !important;
+}
+
+.accessibility-mode .nav-links a {
+    color: #FFFFFF !important;
+    background-color: #333333 !important;
+    border: 2px solid #FFFFFF !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem !important;
+}
+
+.accessibility-mode .nav-links a:hover,
+.accessibility-mode .nav-links a:focus {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    outline: 3px solid #FFFFFF !important;
+}
+
+/* Buttons and Links */
+.accessibility-mode .social-links a,
+.accessibility-mode .sidebar-link,
+.accessibility-mode .btn-primary,
+.accessibility-mode .btn-secondary,
+.accessibility-mode .submit-btn,
+.accessibility-mode .reset-btn,
+.accessibility-mode .accessibility-btn {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+    font-weight: bold !important;
+}
+
+.accessibility-mode .social-links a:hover,
+.accessibility-mode .sidebar-link:hover,
+.accessibility-mode .btn-primary:hover,
+.accessibility-mode .btn-secondary:hover,
+.accessibility-mode .submit-btn:hover,
+.accessibility-mode .reset-btn:hover,
+.accessibility-mode .accessibility-btn:hover {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 3px solid #FFFFFF !important;
+    outline: 3px solid #FFFFFF !important;
+}
+
+/* Form Elements */
+.accessibility-mode input,
+.accessibility-mode select,
+.accessibility-mode textarea,
+.accessibility-mode .responsive-select {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+    font-weight: bold !important;
+}
+
+.accessibility-mode input:focus,
+.accessibility-mode select:focus,
+.accessibility-mode textarea:focus,
+.accessibility-mode .responsive-select:focus {
+    outline: 3px solid #FFFFFF !important;
+    background-color: #FFFFFF !important;
+}
+
+/* Radio buttons and checkboxes */
+.accessibility-mode .radio-option,
+.accessibility-mode .checkbox-option {
+    background-color: #333333 !important;
+    border: 3px solid #FFFFFF !important;
+}
+
+.accessibility-mode .radio-option:hover,
+.accessibility-mode .checkbox-option:hover,
+.accessibility-mode .radio-option:has(input:checked),
+.accessibility-mode .checkbox-option:has(input:checked) {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+.accessibility-mode .radio-option label,
+.accessibility-mode .checkbox-option label {
+    color: inherit !important;
+    font-weight: bold !important;
+}
+
+/* Cards and Sections */
+.accessibility-mode .contact-sidebar,
+.accessibility-mode .hobbies-card,
+.accessibility-mode .skills-card,
+.accessibility-mode .project-card,
+.accessibility-mode .academic-card,
+.accessibility-mode .timeline-item,
+.accessibility-mode .study-benefits,
+.accessibility-mode fieldset {
+    background-color: #000000 !important;
+    border: 3px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+/* Profile Picture and Images */
+.accessibility-mode .profile-image {
+    border: 5px solid #FFFFFF !important;
+    filter: contrast(1.2) brightness(1.1) !important;
+}
+
+.accessibility-mode .profile-picture-section {
+    background-color: #333333 !important;
+    border: 3px solid #FFFFFF !important;
+}
+
+/* Footer */
+.accessibility-mode .main-footer {
+    background-color: #000000 !important;
+    border-top: 3px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+.accessibility-mode .footer-social a {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+.accessibility-mode .footer-social a:hover {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+/* Grid Areas */
+.accessibility-mode .S1,
+.accessibility-mode .S2,
+.accessibility-mode .S3,
+.accessibility-mode .S4,
+.accessibility-mode .S5 {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* Remove all background images and gradients */
+.accessibility-mode * {
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* High contrast focus indicators */
+.accessibility-mode *:focus {
+    outline: 4px solid #FFFFFF !important;
+    outline-offset: 2px !important;
+}
+
+/* Ensure headings are highly visible */
+.accessibility-mode h1,
+.accessibility-mode h2,
+.accessibility-mode h3,
+.accessibility-mode h4,
+.accessibility-mode h5,
+.accessibility-mode h6 {
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}
+
+/* Enhanced contrast for icons */
+.accessibility-mode i {
+    color: inherit !important;
+    background-color: transparent !important;
+}

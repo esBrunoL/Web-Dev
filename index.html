@@ -360,13 +360,20 @@
                     if (body.classList.contains('accessibility-mode')) {
                         // Disable accessibility mode
                         body.classList.remove('accessibility-mode');
-                        body.style.backgroundColor = "";  // Reset to default
-                        body.style.color = "";           // Reset to default
+                        // Remove inline styles to return to CSS defaults
+                        body.style.backgroundColor = "";
+                        body.style.color = "";
+                        
+                        // Update button text
+                        const button = document.querySelector('.accessibility-btn');
+                        button.innerHTML = '<i class="fas fa-universal-access"></i> Accessibility Mode';
                     } else {
                         // Enable accessibility mode
                         body.classList.add('accessibility-mode');
-                        body.style.backgroundColor = "black";  // High contrast background
-                        body.style.color = "white";           // High contrast text
+                        
+                        // Update button text to show it's active
+                        const button = document.querySelector('.accessibility-btn');
+                        button.innerHTML = '<i class="fas fa-universal-access"></i> Normal Mode';
                     }
                 }
             </script>
