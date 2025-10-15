@@ -80,7 +80,7 @@ I'm Bruno Araujo de Gusmao Lobo, a 30-year-old Brazilian student currently pursu
 
 - **Email**: brunoaglobo@gmail.com
 - **WhatsApp**: +1 (647) 881-1148
-- **LinkedIn**: [Connect with me on LinkedIn](https://linkedin.com/in/your-linkedin-profile)
+- **LinkedIn**: [Connect with me on LinkedIn](https://www.linkedin.com/in/bruno-lobo-7b215764/)
 - **GitHub**: [esBrunoL](https://github.com/esBrunoL)
 
 ## 🚀 GitHub Pages Deployment
