@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <!-- 
+        STUDY COLLABORATION FORM PAGE
+        ==============================
+        This page allows visitors to sign up for collaborative study sessions
+        with Bruno. It includes a detailed form to gather necessary information
+        for organizing effective study partnerships.
+        
+        Features:
+        - Comprehensive student information form
+        - Availability scheduling options
+        - File upload for study materials
+        - Form validation for required fields
+        - Professional styling consistent with main site
+        
+        Related Files:
+        - read.me.studies.html (guidelines and instructions)
+        - gridstyle.css (shared styling)
+        - Lab1.html (main homepage)
+    -->
+    
+    <head>
+        <!-- Character encoding and responsive meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Page title for browser tab -->
+        <title>Study With Me - Bruno Araujo Lobo</title>
+        
+        <!-- Shared stylesheet and Font Awesome icons -->
+        <link rel="stylesheet" href="gridstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    
+    <body>
+        <!-- 
+            NAVIGATION BAR
+            Same navigation as main site for consistency
+            Provides easy access to other pages
+        -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>Bruno A. Lobo</h2>
+            </div>
+            <div class="nav-links">
+                <a href="Lab1.html">Home</a>                 <!-- Back to homepage -->
+                <a href="#study-form">Study With Me</a>      <!-- Scroll to form -->
+                <a href="portfolio.html">Portfolio</a>       <!-- Portfolio page -->
+                <a href="Lab1.html#contact">Contact</a>      <!-- Contact section on homepage -->
+            </div>
+        </nav>
+
+        <!-- 
+            MAIN CONTENT CONTAINER
+            Contains all form content and study information
+        -->
+        <div class="study-page-container">
+            
+            <!-- 
+                PAGE HEADER SECTION
+                Welcome message and link to guidelines
+            -->
+            <div class="study-header">
+                <h1><i class="fas fa-graduation-cap"></i> Let's Study Together!</h1>
+                <p>Join me in collaborative learning sessions. Fill out the form below to get started on our educational journey together.</p>
+                
+                <!-- Link to detailed instructions -->
+                <div class="study-info-actions">
+                    <a href="read.me.studies.html" class="info-button">
+                        <i class="fas fa-info-circle"></i> Read Guidelines
+                    </a>
+                </div>
+            </div> 
+
+            <!-- 
+                STUDY PARTNERSHIP FORM
+                Main form for collecting student information and study preferences.
+                Uses HTML5 form validation and semantic input types.
+                Form name "Sform" can be used for JavaScript processing.
+            -->
+            <form name="Sform" id="study-form">
+                
+                <!-- 
+                    FIELDSET: Student Details
+                    Groups related form controls with a descriptive legend.
+                    Contains basic personal information needed for contact and organization.
+                -->
+                <fieldset>
+                    <legend>Student Details</legend>
+                    
+                    <!-- REQUIRED FIELD: First Name -->
+                    <label for="fname">First Name*</label>
+                    <input type="text" id="fname" name="fname" required>
+                    
+                    <!-- REQUIRED FIELD: Last Name -->
+                    <label for="lname">Last Name*</label>
+                    <input type="text" id="lname" name="lname" required>
+                    <br><br>
+                    
+                    <!-- REQUIRED FIELD: Birth Month/Year (for age verification and birthday discounts) -->
+                    <label for="bdaymonth">Select Birthday (month and year)*</label>
+                    <input type="month" id="bdaymonth" name="bdaymonth" required>
+                    <br><br>
+          
+          <lable for="gender">Select your gender:</label> 
+          <br>
+          <input type="radio" id="gender" name="gender" value="Male">
+          <label for="gender"> Male</label>
+          <br>
+          
+          <input type="radio" id="gender" name="gender" value="Female">
+          <label for="gender"> Female</label>
+          <br>
+          
+          <input type="radio" id="gender" name="gender" value="Non Binary">
+          <label for="gender"> Non Binary</label>
+          <br>
+          <br>
+          
+          <label>Studying days:</label>
+          <br>
+          
+          <input type="checkbox" id="Sunday" name="Sunday" Value="1">
+          <label for="Sunday">Sunday</label>
+         
+          <input type="checkbox" id="Monday" name="Monday" Value="2">
+          <label for="Monday">Monday</label>
+          
+          <input type="checkbox" id="tuesday" name="tuesday" Value="3">
+          <label for="tuesday">Tuesday</label>
+          
+          <input type="checkbox" id="Wednesday" name="Wednesday" Value="4">
+          <label for="Wednesday">Wednesday</label>
+          
+          <input type="checkbox" id="Thursday" name="Thursday" Value="5">
+          <label for="Thursday">Thursday</label>
+          
+          <input type="checkbox" id="Friday" name="Friday" Value="6">
+          <label for="Monday">Monday</label>
+          
+          <input type="checkbox" id="Saturday" name="Saturday" Value="7">
+          <label for="Saturday">Saturday</label>
+          <br><br>
+          
+          <label for="avb"> Choose an available time:</label>
+          <select id="avb" name="avb">
+            <option value="NA">Not availible</option>
+            <option value="1pm">1 p.m.</option>
+            <option value="2pm">2 p.m.</option>
+            <option value="3pm">3 p.m.</option>
+            <option value="4pm">4 p.m.</option>
+            <option value="5pm">5 p.m.</option>
+            <option value="night">night time only</option>
+          </select>
+          <br>
+          <br>
+          
+          <label for="email">E-mail:*</label>
+          <input type="email" id="email" name="email" required> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
+          
+          <label for="phone-number">Phone number:</label>
+          <input type="password" id="password" name="password" minlength="4">
+          <br>
+          
+         
+          <br>
+          <br>
+           
+            <p>What do you want to study?</p>
+                 <textarea name="message" rows="10" cols="30">Please enter the subject, and specific topics, the more specific you go, the better we can get it done. </textarea>
+          <br>
+          <br>
+          
+          <label for="myfile"> Upload the sumarization of the topic:</label>
+          <input type="file" id="myfile" name="myfile">
+          <br>
+          
+          <div class="form-notice">
+              <p><i class="fas fa-info-circle"></i> If you have any questions, please check the <a href="read.me.studies.html">Read Me Guidelines</a> or <a href="https://wa.me/16478811148">contact me directly</a>.</p>
+              <p><i class="fas fa-exclamation-triangle"></i> Please notice that all required information is marked with <strong>*</strong></p>
+          </div>
+          
+          <div class="form-actions">
+              <input type="submit" value="Submit Application" class="submit-btn"> 
+              <input type="reset" value="Clear Form" class="reset-btn">
+          </div>
+        </fieldset>
+      </form>
+
+      <div class="study-benefits">
+          <h2><i class="fas fa-star"></i> Why Study Together?</h2>
+          <div class="benefits-grid">
+              <div class="benefit-item">
+                  <i class="fas fa-users"></i>
+                  <h3>Collaborative Learning</h3>
+                  <p>Learn from each other's perspectives and problem-solving approaches</p>
+              </div>
+              <div class="benefit-item">
+                  <i class="fas fa-clock"></i>
+                  <h3>Structured Schedule</h3>
+                  <p>Regular study sessions help maintain consistency and accountability</p>
+              </div>
+              <div class="benefit-item">
+                  <i class="fas fa-lightbulb"></i>
+                  <h3>Shared Resources</h3>
+                  <p>Access to additional study materials and different learning techniques</p>
+              </div>
+              <div class="benefit-item">
+                  <i class="fas fa-target"></i>
+                  <h3>Goal Achievement</h3>
+                  <p>Stay motivated and achieve your academic objectives together</p>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Bruno Araujo Lobo</h4>
+                <p>Computer Programming Student | Study Partner</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect With Me</h4>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/16478811148" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:brunoaglobo@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/esBrunoL" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bruno Araujo Lobo. All rights reserved. | Made with ❤️ in Toronto</p>
+        </div>
+    </footer>
+    </body>
+  </html>
+  

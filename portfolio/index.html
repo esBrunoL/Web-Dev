@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    BRUNO ARAUJO LOBO - PERSONAL WEBSITE
+    ====================================
+    This is the main homepage for my personal website showcasing my journey
+    from Brazil to Canada and my Computer Programming studies at Sault College.
+
+    Created: 2024
+    Author: Bruno Araujo de Gusmao Lobo
+    Purpose: Personal portfolio and networking website
+    
+    File Structure:
+    - Lab1.html (this file) - Main homepage
+    - Studies.forms.html - Study collaboration form
+    - portfolio.html - Academic and project portfolio
+    - gridstyle.css - Main stylesheet with responsive design
+    - index.html - Redirect page for GitHub Pages
+-->
+
+<head>
+    <!-- Character encoding for proper text display -->
+    <meta charset="UTF-8">
+    
+    <!-- Responsive design meta tag for mobile compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to main CSS stylesheet for styling -->
+    <link rel="stylesheet" href="gridstyle.css">
+    
+    <!-- Page title that appears in browser tab -->
+    <title>Bruno Lobo - Personal Website</title>
+    
+    <!-- Font Awesome CDN for professional icons throughout the site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 
+        LEGACY CODE SECTION - PRESERVED FOR REFERENCE
+        This commented code was for testing JavaScript functionality.
+        Uncomment the line below if you want to test the Welcome.js file.
+        Note: Update the path to use relative paths for web deployment.
+    -->
+    <!-- <script src="Welcome.js"></script> -->
+    
+    <!-- 
+        NAVIGATION BAR SECTION
+        Fixed navigation bar that stays at the top of the page when scrolling.
+        Provides easy access to all main sections of the website.
+        Uses CSS classes: navbar, nav-brand, nav-links
+    -->
+    <nav class="navbar">
+        <!-- Brand/Logo section with name -->
+        <div class="nav-brand">
+            <h2>Bruno A. Lobo</h2>
+        </div>
+        
+        <!-- Navigation links to different sections/pages -->
+        <div class="nav-links">
+            <a href="#home">Home</a>                      <!-- Scrolls to home section -->
+            <a href="Studies.forms.html">Study With Me</a> <!-- Links to study form page -->
+            <a href="portfolio.html">Portfolio</a>         <!-- Links to portfolio page -->
+            <a href="#contact">Contact</a>                 <!-- Scrolls to contact section -->
+        </div>
+    </nav>
+
+    <!-- 
+        MAIN CONTENT CONTAINER
+        Uses CSS Grid layout for responsive design.
+        Grid areas are defined in gridstyle.css:
+        - S1: Header section (introduction)
+        - S2: Sidebar (contact and accessibility)
+        - S3: Main content (journey timeline)
+        - S4: Skills and hobbies section
+        - S5: Footer section
+    -->
+    <div class="grid-container">
+        
+        <!-- 
+            HEADER SECTION (Grid Area: S1)
+            Personal introduction with name, role, and social media links.
+            Uses id="home" for navigation anchor linking.
+        -->
+        <div class="S1" id="home">
+            <!-- Main heading with full name -->
+            <h1>Hello! I'm Bruno Araujo de Gusmao Lobo</h1>
+            
+            <!-- Subtitle describing current status -->
+            <h2>Computer Programming Student & Brazilian in Canada</h2>
+            
+            <!-- Brief introduction paragraph -->
+            <p>Welcome to my personal website! I'm a 30-year-old Brazilian who recently moved to Toronto, Ontario, and I'm currently studying Computer Programming at Sault College, graduating in December 2025.</p>
+            
+            <!-- 
+                SOCIAL MEDIA LINKS SECTION
+                Professional networking and contact buttons.
+                Each link opens in new tab (target="_blank") for better UX.
+                Icons from Font Awesome for visual appeal.
+            -->
+            <div class="social-links">
+                <!-- LinkedIn professional networking -->
+                <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" class="linkedin-btn">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
+                
+                <!-- WhatsApp for quick messaging -->
+                <a href="https://wa.me/16478811148" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                
+                <!-- Email contact -->
+                <a href="mailto:brunoaglobo@gmail.com" class="email-btn">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+            </div>
+        </div>
+
+        <!-- 
+            MAIN CONTENT SECTION (Grid Area: S3)
+            Contains the personal journey timeline with embedded Google Maps.
+            Shows the geographical progression from Brazil to Canada.
+        -->
+        <div class="S3">
+            <div class="about-section">
+                <h2>My Journey: From Brazil to Canada</h2>
+                
+                <!-- Current academic status -->
+                <p>I am currently enrolled in the Computer Programming program at Sault College, which will end by December 2025.</p>
+
+                <!-- 
+                    GEOGRAPHICAL JOURNEY TIMELINE
+                    Visual timeline showing Bruno's life journey with embedded maps.
+                    Each timeline item includes location, description, and interactive map.
+                -->
+                <div class="journey-timeline">
+                    
+                    <!-- TIMELINE ITEM 1: Birthplace -->
+                    <div class="timeline-item">
+                        <h3><i class="fas fa-map-marker-alt"></i> Born in Recife, Pernambuco, Brazil</h3>
+                        <p>Recife is the vibrant capital city of Pernambuco state, known for its rich culture and beautiful coastline.</p>
+                        
+                        <!-- Google Maps embed for Recife, Brazil -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252836.63623057495!2d-35.099034863608594!3d-8.042938364264208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab196f94e5408b%3A0xe5800ef782bde3a6!2sRecife%2C%20State%20of%20Pernambuco%2C%20Brazil!5e0!3m2!1sen!2sca!4v1718117027912!5m2!1sen!2sca"
+                            width="100%" height="250" 
+                            style="border:0; border-radius: 10px;" 
+                            allowfullscreen=""
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- TIMELINE ITEM 2: Childhood home -->
+                    <div class="timeline-item">
+                        <h3><i class="fas fa-home"></i> My Life in Brazil</h3>
+                        <p>This was my neighborhood in Recife, where I grew up and developed my love for swimming and outdoor activities.</p>
+                        
+                        <!-- Google Maps embed for specific neighborhood in Recife -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.6506116596092!2d-34.88967892619029!3d-8.034911180224542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1912e0620f3b%3A0x5b9029254d06a3da!2sEstr.%20de%20Bel%C3%A9m%2C%20516%20-%20Encruzilhada%2C%20Recife%20-%20PE%2C%2052030-280%2C%20Brazil!5e0!3m2!1sen!2sca!4v1718117235296!5m2!1sen!2sca"
+                            width="100%" height="250" 
+                            style="border:0; border-radius: 10px;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- TIMELINE ITEM 3: Current location -->
+                    <div class="timeline-item">
+                        <h3><i class="fas fa-plane"></i> New Adventures in Toronto</h3>
+                        <p>I recently moved to Toronto, Ontario, to pursue my Computer Programming degree and start a new chapter in my life.</p>
+                        
+                        <!-- Google Maps embed for current location in Toronto -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6485101869393!2d-79.46711852488941!3d43.655480752284895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3428cad4e645%3A0xc4fce9861c5a0be8!2sToronto%2C%20ON%20M6P%202P4!5e0!3m2!1sen!2sca!4v1718117526812!5m2!1sen!2sca"
+                            width="100%" height="250" 
+                            style="border:0; border-radius: 10px;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 
+            SKILLS AND HOBBIES SECTION (Grid Area: S4)
+            Showcases personal interests and professional skills.
+            Split into two main cards: hobbies and skills.
+        -->
+        <div class="S4">
+            <div class="skills-hobbies-section">
+                
+                <!-- 
+                    HOBBIES CARD
+                    Personal interests and activities that show personality.
+                    Each hobby has an icon and description for visual appeal.
+                -->
+                <div class="hobbies-card">
+                    <h2><i class="fas fa-heart"></i> My Passions & Hobbies</h2>
+                    
+                    <!-- HOBBY 1: Hiking -->
+                    <div class="hobby-item">
+                        <div class="hobby-icon"><i class="fas fa-hiking"></i></div>
+                        <div class="hobby-content">
+                            <h3>Hiking</h3>
+                            <p>I love hiking and discovering new places, enjoying nature, and if it ends with a campfire, that's perfect!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- HOBBY 2: Swimming -->
+                    <div class="hobby-item">
+                        <div class="hobby-icon"><i class="fas fa-swimmer"></i></div>
+                        <div class="hobby-content">
+                            <h3>Swimming</h3>
+                            <p>I am a former swimming athlete, so it always brings me good memories and keeps me connected to my athletic past.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- HOBBY 3: Music -->
+                    <div class="hobby-item">
+                        <div class="hobby-icon"><i class="fas fa-music"></i></div>
+                        <div class="hobby-content">
+                            <h3>Listening to Music</h3>
+                            <p>This is probably the hobby I do the most. If I can do something while listening to music, then I will!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                    SKILLS CARD
+                    Professional and personal competencies.
+                    Highlights transferable skills for potential employers or collaborators.
+                -->
+                <div class="skills-card">
+                    <h2><i class="fas fa-star"></i> Skills & Expertise</h2>
+                    
+                    <!-- SKILL 1: Analytical Thinking -->
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="skill-content">
+                            <h3>Analytical Thinking</h3>
+                            <p>I have a natural ability with numbers and problem-solving. It's like I can see the numbers collaborating with me.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- SKILL 2: Teamwork -->
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-users"></i></div>
+                        <div class="skill-content">
+                            <h3>Team Player</h3>
+                            <p>I learned that no one can solve all problems alone. We always need to team up to get the best out of ourselves.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- SKILL 3: Customer Service -->
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-headset"></i></div>
+                        <div class="skill-content">
+                            <h3>Customer Service</h3>
+                            <p>I've always worked in customer service positions, so my actions are always focused on how to best serve customers.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- SKILL 4: Growth Mindset -->
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="skill-content">
+                            <h3>Continuous Improvement</h3>
+                            <p>I'm always learning and improving myself, both personally and professionally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 
+            CONTACT SIDEBAR SECTION (Grid Area: S2)
+            Contains contact information, accessibility features, and quick navigation.
+            Uses id="contact" for navigation anchor linking.
+        -->
+        <div class="S2" id="contact">
+            <div class="contact-sidebar">
+                <h3> Get In Touch  <i class="fas fa-phone-alt"></i></h3>
+                
+                <!-- 
+                    ACCESSIBILITY SECTION
+                    Provides a button to toggle high-contrast mode for better accessibility.
+                    Useful for users with visual impairments or color blindness.
+                -->
+                <div class="accessibility-section">
+                    <button type="button" onclick="toggleAccessibility()" class="accessibility-btn">
+                        <i class="fas fa-universal-access"></i> Accessibility Mode
+                    </button>
+                </div>
+
+                <!-- 
+                    QUICK NAVIGATION LINKS
+                    Easy access to main pages of the website.
+                    Styled as buttons for better visual hierarchy.
+                -->
+                <div class="quick-links">
+                    <h4>Quick Actions</h4>
+                    <!-- Link to study collaboration form -->
+                    <a href="Studies.forms.html" class="sidebar-link">
+                        <i class="fas fa-graduation-cap"></i> Study With Me
+                    </a>
+                    <!-- Link to portfolio page -->
+                    <a href="portfolio.html" class="sidebar-link">
+                        <i class="fas fa-briefcase"></i> View Portfolio
+                    </a>
+                </div>
+
+                <!-- 
+                    CONTACT INFORMATION DISPLAY
+                    Key details about current location and academic status.
+                    Uses icons for visual appeal and quick recognition.
+                -->
+                <div class="contact-info">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Toronto, ON, Canada</p>
+                    <p><i class="fas fa-graduation-cap"></i> Sault College Student</p>
+                    <p><i class="fas fa-calendar"></i> Graduating December 2025</p>
+                </div>
+            </div>
+
+            <!-- 
+                JAVASCRIPT FOR ACCESSIBILITY TOGGLE
+                Function to switch between normal and high-contrast modes.
+                Toggles CSS class and inline styles for immediate visual feedback.
+                
+                How it works:
+                1. Gets reference to document body
+                2. Checks if accessibility mode is already active
+                3. If active: removes class and resets styles
+                4. If not active: adds class and applies high-contrast styles
+            -->
+            <script>
+                function toggleAccessibility() {
+                    const body = document.body;
+                    
+                    // Check if accessibility mode is currently active
+                    if (body.classList.contains('accessibility-mode')) {
+                        // Disable accessibility mode
+                        body.classList.remove('accessibility-mode');
+                        body.style.backgroundColor = "";  // Reset to default
+                        body.style.color = "";           // Reset to default
+                    } else {
+                        // Enable accessibility mode
+                        body.classList.add('accessibility-mode');
+                        body.style.backgroundColor = "black";  // High contrast background
+                        body.style.color = "white";           // High contrast text
+                    }
+                }
+            </script>
+        </div>
+
+        <!-- 
+            FOOTER SECTION (Grid Area: S5)
+            Contains copyright information, social links, and feedback request.
+            Provides closure to the page and additional contact opportunities.
+        -->
+        <div class="S5">
+            <footer class="main-footer">
+                <!-- 
+                    FOOTER CONTENT CONTAINER
+                    Three-column layout with different types of information.
+                    Responsive design collapses to single column on mobile.
+                -->
+                <div class="footer-content">
+                    
+                    <!-- COLUMN 1: Personal branding -->
+                    <div class="footer-section">
+                        <h4>Bruno Araujo Lobo</h4>
+                        <p>Computer Programming Student | Brazilian in Canada</p>
+                    </div>
+                    
+                    <!-- COLUMN 2: Social media links -->
+                    <div class="footer-section">
+                        <h4>Connect With Me</h4>
+                        <div class="footer-social">
+                            <!-- LinkedIn - Professional networking -->
+                            <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            <!-- WhatsApp - Quick messaging -->
+                            <a href="https://wa.me/16478811148" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            
+                            <!-- Email - Professional contact -->
+                            <a href="mailto:brunoaglobo@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            
+                            <!-- GitHub - Code repository -->
+                            <a href="https://github.com/esBrunoL" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- COLUMN 3: Feedback request -->
+                    <div class="footer-section">
+                        <h4>Feedback</h4>
+                        <p>Thank you for visiting my webpage! Please send me feedback so I can keep improving.</p>
+                    </div>
+                </div>
+                
+                <!-- 
+                    FOOTER BOTTOM SECTION
+                    Copyright notice and location signature.
+                    Standard web practice for legal and branding purposes.
+                -->
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Bruno Araujo Lobo. All rights reserved. | Made with ❤️ in Toronto</p>
+                </div>
+            </footer>
+        </div>
+
+</body>
+<!-- Closing div for grid-container (Note: this should be moved before </body> for proper HTML structure) -->
+</div>
+
+</html>
+
+<!-- 
+    END OF DOCUMENT
+    ===============
+    This concludes the main homepage of Bruno's personal website.
+    
+    For maintenance and updates:
+    1. Update LinkedIn URL when profile is created
+    2. Add new projects to the timeline as they're completed
+    3. Update graduation date and status as needed
+    4. Add new skills as they're developed
+    5. Update contact information if location changes
+    
+    Remember to test responsive design on different devices after making changes.
+    All external links should be verified periodically to ensure they still work.
+-->
