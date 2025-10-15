@@ -4,7 +4,7 @@ Welcome to my personal website! This is a responsive web portfolio showcasing my
 
 ## 🌐 Live Website
 
-Visit my website: [https://esbrunoL.github.io/Web-Dev/Lab1.html](https://esbrunoL.github.io/Web-Dev/Lab1.html)
+Visit my website: [https://esbrunol.github.io/Web-Dev/](https://esbrunol.github.io/Web-Dev/)
 
 ## 📋 About
 
@@ -91,7 +91,7 @@ This website is deployed using GitHub Pages. To deploy your own version:
 2. Go to Settings > Pages
 3. Select "Deploy from a branch"
 4. Choose "main" branch and "/ (root)" folder
-5. Your site will be available at `https://yourusername.github.io/Web-Dev/Lab1.html`
+5. Your site will be available at `https://yourusername.github.io/Web-Dev/`
 
 ## 📝 License
 
