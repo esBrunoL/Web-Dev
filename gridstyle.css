@@ -66,10 +66,25 @@ Uses flexbox for responsive layout
 }
 
 /* Brand/Name styling in navigation */
-.nav-brand h2 {
+.nav-brand .brand-link {
     color: #f5f5dc;                       /* Light cream color */
+    text-decoration: none;                /* Remove underline from link */
+    transition: color 0.3s ease;         /* Smooth color transition */
+}
+
+.nav-brand .brand-link:hover {
+    color: #87ceeb;                       /* Sky blue on hover */
+}
+
+.nav-brand h2 {
+    color: inherit;                       /* Inherit color from parent link */
     margin: 0;                            /* Remove default margins */
     font-size: 1.5rem;                    /* Relative font size */
+    transition: transform 0.3s ease;     /* Smooth transform transition */
+}
+
+.nav-brand .brand-link:hover h2 {
+    transform: scale(1.05);               /* Slight scale effect on hover */
 }
 
 /* Navigation links container */
@@ -1180,6 +1195,17 @@ textarea {
 .accessibility-mode .navbar {
     background-color: #000000 !important;
     border-bottom: 3px solid #FFFFFF !important;
+}
+
+.accessibility-mode .nav-brand .brand-link {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.accessibility-mode .nav-brand .brand-link:hover,
+.accessibility-mode .nav-brand .brand-link:focus {
+    color: #FFFFFF !important;
+    outline: 3px solid #FFFFFF !important;
 }
 
 .accessibility-mode .nav-links a {
