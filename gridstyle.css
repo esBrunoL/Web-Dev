@@ -33,7 +33,6 @@ body {
     background: linear-gradient(135deg, rgba(44, 70, 163, 0.8), rgba(0, 0, 0, 0.9));
     min-height: 100vh;
     font-family: Arial, sans-serif;
-}
 
 /* 
 NAVIGATION BAR STYLES
@@ -80,11 +79,6 @@ Uses flexbox for responsive layout
     color: inherit;                       /* Inherit color from parent link */
     margin: 0;                            /* Remove default margins */
     font-size: 1.5rem;                    /* Relative font size */
-    transition: transform 0.3s ease;     /* Smooth transform transition */
-}
-
-.nav-brand .brand-link:hover h2 {
-    transform: scale(1.05);               /* Slight scale effect on hover */
 }
 
 /* Navigation links container */
@@ -221,6 +215,51 @@ Layout Structure:
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     border-color: rgba(255,255,255,0.3);
+}
+
+/* Maintain same appearance for clicked and visited states */
+.linkedin-btn:active,
+.linkedin-btn:visited,
+.linkedin-btn:focus {
+    background: linear-gradient(135deg, #0077b5, #005885);
+    color: white;
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.whatsapp-btn:active,
+.whatsapp-btn:visited,
+.whatsapp-btn:focus {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.email-btn:active,
+.email-btn:visited,
+.email-btn:focus {
+    background: linear-gradient(135deg, #ea4335, #c23321);
+    color: white;
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* Override any default link states for social buttons */
+.social-links a:active,
+.social-links a:visited {
+    text-decoration: none;
+}
+
+/* Ensure buttons return to normal state after hover ends */
+.linkedin-btn:not(:hover):not(:active),
+.whatsapp-btn:not(:hover):not(:active),
+.email-btn:not(:hover):not(:active) {
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Timeline Styles */
@@ -1131,7 +1170,9 @@ textarea {
         padding: 0.5rem 0.7rem;
     }
 }
-    
+
+/* Mobile responsive layout */
+@media (max-width: 480px) {
     .grid-container {
         grid-template-areas:
             'header'
