@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Booking palce for your dinner!</h1>
+    <label for="name">Name : </label>
+    <input type="text" id="name" autofocus placeholder="Enter first and last name" onfocusout="checkName()" ><br><br>
+    <label for="phone">Phone number : </label>
+    <input type="text" id="phone" placeholder="Enter yuor phone number" onfocusout="checkNumber()"><br><br>
+
+    <label>Select a hour</label> <br>
+    <input type="radio" name="box1" value="05:00" id="five" checked> 
+    <label for="five">05:00</label>  <br>
+    <input type="radio" name="box1" value="06:00" id="six">
+    <label for="six">06:00</label>  <br>
+    <input type="radio" name="box1" value="07:00" id="seven">
+    <label for="seven">07:00</label>  <br>
+    <input type="radio" name="box1" value="08:00" id="eight">
+    <label for="eight">08:00</label>  <br> <br>
+
+    <label>What would you like to have with us ?</label> <br>
+    <input type="checkbox" name="box2" value="Starters" id="starters">
+    <label for="starters">Starters</label> <br>
+    <input type="checkbox" name="box2" value="Main Course" id="mainCourse">
+    <label for="mainCourse">Main Course</label> <br>
+    <input type="checkbox" name="box2" value="Desserts" id="desserts">
+    <label for="desserts">Desserts</label> <br>
+    <input type="checkbox" name="box2" value="Drinks" id="drinks">
+    <label for="drinks">Drinks</label> <br> <br>
+    
+    <button onclick="submit()" id="button1" disabled>Submit</button>
+    <label id="message">...</label>
+
+</body>
+<script>
+    
+    message = document.getElementById("message");
+    buttonControler = []
+    let phone, fname
+
+
+
+    function checkName(){
+        input = document.getElementById("name");
+        name = input.value.split(" ")
+        if(input.value.split(" ").length >= 2){
+            message.innerHTML = "..."
+            input.style.backgroundColor = "initial"
+            buttonControler[0] = 1
+            fname = input.value;
+            
+        }
+        else{
+            input.style.backgroundColor = "red"
+            message.innerHTML = "Error: First and last names are required."
+            return
+        }
+        if(buttonControler[1]){
+            document.getElementById("button1").disabled = false
+        }
+        return
+    }
+    function checkNumber(){
+        input = document.getElementById("phone");
+        phone = input.value;
+        
+        
+        
+        if(phone.length != 6){
+            input.style.backgroundColor = "red"
+            message.innerHTML = "Error: Phone numbers must have excatly 6 characters."
+            return
+        }
+        else if( phone.length == 0){
+            input.style.backgroundColor = "red"
+            message.innerHTML = "Error: Phone number is empty"
+            return
+        }
+
+        //Found this expression for checking if the first element in a string is a number on StackOverflow : https://stackoverflow.com/questions/39736188/check-if-string-starts-with-a-number
+        else if( !(phone.match(/^\d/))){
+            input.style.backgroundColor = "red"
+            message.innerHTML = "Error: Phone number must start with numbers."
+            return
+        }
+        else{
+            message.innerHTML = "..."
+            input.style.backgroundColor = "initial"
+            buttonControler[1] = 1
+        }
+        if(buttonControler[0]){
+            document.getElementById("button1").disabled = false
+        }
+
+    }
+
+    function submit(){
+        hours = document.getElementsByName("box1");
+        let hour
+        meals = document.getElementsByName("box2");
+        pick = []
+        pickCounter = 0
+        
+        //console.log(hours[1].value)
+        let i
+        for(i = 0; i < hours.length; i++){
+            if(hours[i].checked){
+                hour = hours[i].value
+                break
+            }
+
+        }
+
+        for(n = 0; n < meals.length; n++){
+            if(meals[n].checked)
+            pick += meals[n].value + " "
+
+        }
+        let meal 
+
+        message.innerHTML = "Reservation for: " + fname + " Phone: (" + phone + ") at " + hour + " Starters are " + pick
+
+    }
+
+</script>
+</html>

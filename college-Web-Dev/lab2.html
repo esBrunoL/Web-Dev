@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="displayNames()">All Names</button> <br> <br>
+    
+    <button onclick="displayHealth()">Health issues</button> 
+    <input type="number" name="health" id="healthIssue"> <br> <br>
+
+    <input type="radio" name="weight" id="imperial" checked>
+    <label for="imperial">Imperial</label>
+    <input type="radio" name="weight" id="metric" >
+    <label for="metric"> Metric</label>
+    <button onclick="displayWeight()">Weight</button> <br> <br>
+
+    <button onclick="displayInt()">Inteligence - Friendly</button> <br> <br>
+    <button onclick="avgInteligence(0)">Average inteligence</button> <br> <br>
+    <button onclick="avgInteligence(4)">Average inteligence for Child Friendly = 4</button> <br> <br>
+    
+    <div id="answer" ></div>
+
+
+    
+</body>
+
+<script>
+    
+    answer = document.getElementById("answer")
+
+    catObj = null
+    fetch("https://api.thecatapi.com/v1/breeds")
+    .then( a=> {
+        return a.json()
+    })
+    .then(d => {
+        catObj = d
+        //console.log(catObj)
+    })
+    
+    function displayNames() {
+        answer.innerHTML = "All names(Total = "+ catObj.length + ") <hr>"
+
+        for(i = 0; i < catObj.length; i++ ){
+            answer.innerHTML += catObj[i].name + "<br>"
+        }
+    }
+    
+    function displayHealth() {
+        issue =document.getElementById("healthIssue").value
+       
+    
+    
+        if( issue == ""){
+            answer.innerHTML = "Please enter the health issue number <hr>"
+            
+            return;
+
+        } 
+        counter = 0;
+        buffer = [];
+        answer.innerHTML = "Health Issues for : "+  issue+ "<hr>"
+
+        for(i = 0; i < catObj.length; i++ ){
+            if ( catObj[i].health_issues == issue) {
+                counter ++;
+                answer.innerHTML += catObj[i].name + "<br>"
+            }
+        }
+        answer.innerHTML += "<hr> Total = "+ counter        
+    }
+
+    function displayWeight() {
+        unit = document.getElementsByName("weight")
+        n = 0;
+        for(n ; n < unit.length; n++){
+            if (unit[n].checked){
+                break
+            }
+        }
+        if(n == 0){
+            unit = "Imperial"
+        }
+        else{ unit = "Metric"}
+        //console.log(unit)
+
+        answer.innerHTML = "Weights in " + unit +"<hr>"
+        unit = unit.toLowerCase()
+        //console.log(unit)
+        for(i = 0; i< catObj.length; i++){
+            answer.innerHTML += catObj[i].weight[unit] +"<br>"  
+        }
+    }
+
+    function displayInt(){
+        
+        answer.innerHTML = "I - F <hr>"
+        for( i = 0; i<catObj.length; i++){
+            answer.innerHTML += catObj[i].intelligence + " - " +catObj[i].child_friendly + "<br>"
+        }
+    }
+
+    function avgInteligence(n) {
+        
+        avg = 0;
+        counter = 0;
+
+        if (n == 0 ){
+            for( i = 0; i < catObj.length; i++){
+                avg +=catObj[i].intelligence
+                counter ++;
+            }
+        }
+        else if(n == 4){
+            for( i = 0; i < catObj.length; i++){
+                if( catObj[i].child_friendly == 4){
+                    avg += catObj[i].intelligence
+                    counter ++;
+                }
+            }
+        }
+        
+        avg = avg/counter;
+        answer.innerHTML = "Average inteligence : " + avg.toFixed(2) + "<hr>";
+        return
+    }
+
+</script>
+</html>

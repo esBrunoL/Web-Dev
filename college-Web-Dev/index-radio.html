@@ -57,7 +57,19 @@
     radioItem = document.getElementsByName("box2");
 
     joke = document.getElementById("joke");
-
+    jokeCategories = []
+    
+    fetch("https://api.chucknorris.io/jokes/categories")
+    .then (a => {
+        return a.json()
+    }
+    )
+    .then (d => {
+        jokeCategories = d
+        console.log(jokeCategories)
+    }
+    )
+    
     
     function submit() {
         //console.log("Entrou na função")
@@ -96,8 +108,21 @@
         }
     }
     function  displayJoke() {
+
+        //console.log(jokeCategories)
+        jokeMessage = document.getElementById("jokeHolder");
+        
+
         if ( document.getElementById("cat").value != ""){
-            category = "?category="+document.getElementById("cat").value;
+            category =document.getElementById("cat").value;
+            if ( jokeCategories.includes(category)) {
+                category = "?category="+category;
+            }
+            else{
+                category = "";
+                noCategoryMessage = document.createTextNode("This category is not avalible");
+                jokeMessage.appendChild(noCategoryMessage);
+            }
         }
         else{category = "";}
         //Tried adding the url on fetch, but it did not worked, so I a variable to get the  url flexible.
@@ -109,6 +134,7 @@
         )
         .then(d => {
             joke.innerHTML = d.value
+            console.log(url)
         }
         )
         
