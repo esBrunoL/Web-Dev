@@ -271,6 +271,49 @@ Layout Structure:
     margin-bottom: 1rem;
 }
 
+/* Profile Picture Section */
+.profile-picture-section {
+    text-align: center;
+    margin: 1.5rem 0 2rem 0;
+    padding: 1rem;
+    background: rgba(135, 206, 235, 0.1);
+    border-radius: 15px;
+    border: 2px solid rgba(135, 206, 235, 0.2);
+}
+
+.profile-image-container {
+    margin-bottom: 1rem;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid rgba(135, 206, 235, 0.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    border-color: #87ceeb;
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.4);
+}
+
+.profile-caption {
+    color: #f5f5dc;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.profile-caption small {
+    color: #87ceeb;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
 .accessibility-btn {
     background: linear-gradient(135deg, #ff6b6b, #ee5a24);
     color: white;
